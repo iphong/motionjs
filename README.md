@@ -3,7 +3,7 @@ motion.js
 
 A rich Javascript 3D Transform & Animation library based entirely on CSS3
 
-EXAMPLES:
+BASIC EXAMPLES
     
     // Time unit is default to 'ms' and distance unit is default to 'px'
     
@@ -45,29 +45,29 @@ EXAMPLES:
             });
         });
 
-// BETA FEATURES
+BETA FEATURES
 
-3D Viewport Class
-
-var viewport = new motion.Viewport({ perspective: 500 });
-
-
-3D Box Class Constructor
-
-var floor = new motion.Box(200,10,200).in(viewport);
-
-// create a new 3d box and makes it a child of floor
-var box1 = new motion.Box({ width: 40, height: 40, depth: 40 }).parent(floor);
-
-// create an exact version of box1 and append to its location
-var box2 = box1.clone(); 
-
-// create new box instance like box2, but don't append it to the DOM yet
-var box3 = new motion.Box({ height: 60 }).similar(box2);
-
-// Create a proxy version of box3, this instance has its own transform channels, 
-// but any other properties remain sync with the original instance, unless defined.
-var box4 = box3.proxy();
+    3D Viewport Class
+    
+    var viewport = new motion.Viewport({ perspective: 500 });
+    
+    
+    3D Box Class Constructor
+    
+    var floor = new motion.Box(200,10,200).in(viewport);
+    
+    // create a new 3d box and makes it a child of floor
+    var box1 = new motion.Box({ width: 40, height: 40, depth: 40 }).parent(floor);
+    
+    // create an exact version of box1 and append to its location
+    var box2 = box1.clone(); 
+    
+    // create new box instance like box2, but don't append it to the DOM yet
+    var box3 = new motion.Box({ height: 60 }).similar(box2);
+    
+    // Create a proxy version of box3, this instance has its own transform channels, 
+    // but any other properties remain sync with the original instance, unless defined.
+    var box4 = box3.proxy();
 
 
 
